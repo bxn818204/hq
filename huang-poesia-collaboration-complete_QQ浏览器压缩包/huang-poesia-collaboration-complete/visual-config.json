@@ -1,0 +1,227 @@
+{
+  "siteConfig": {
+    "title": "HUANG / POESIA",
+    "subtitle": "钢铁炼成的黄女士",
+    "tagline": "诗意创造者 | 内容中心 | 思想分发者",
+    "italianQuote": "La creazione è l'essenza dell'anima"
+  },
+  
+  "theme": {
+    "colors": {
+      "primary": "#B8860B",
+      "secondary": "#CD5C5C", 
+      "background": "#F8F8FF",
+      "text": "#2C3E50",
+      "accent": "#DAA520",
+      "muted": "#708090"
+    },
+    "gradients": {
+      "hero": "linear-gradient(135deg, #F8F8FF 0%, #F5F5F5 100%)",
+      "title": "linear-gradient(135deg, #B8860B, #CD5C5C, #B8860B)",
+      "button": "linear-gradient(135deg, #2C3E50 0%, #B8860B 100%)"
+    }
+  },
+  
+  "typography": {
+    "fonts": {
+      "heading": "Playfair Display",
+      "body": "Inter",
+      "chinese": "STZhongsong, 华文中宋",
+      "decorative": "STZhongsong, 华文中宋"
+    },
+    "sizes": {
+      "hero": "6rem",
+      "h1": "3rem",
+      "h2": "2.5rem",
+      "h3": "2rem",
+      "body": "1rem",
+      "small": "0.875rem"
+    },
+    "weights": {
+      "light": 300,
+      "normal": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700,
+      "black": 900
+    }
+  },
+  
+  "layout": {
+    "header": {
+      "height": "80px",
+      "background": "rgba(248, 248, 255, 0.95)",
+      "blur": true
+    },
+    "sections": {
+      "padding": "80px 0",
+      "maxWidth": "1200px"
+    },
+    "cards": {
+      "borderRadius": "8px",
+      "shadow": "0 4px 6px rgba(0, 0, 0, 0.1)",
+      "hoverShadow": "0 8px 25px rgba(0, 0, 0, 0.15)"
+    }
+  },
+  
+  "animations": {
+    "vinyl": {
+      "enabled": true,
+      "speed": "20s",
+      "direction": "normal"
+    },
+    "fadeIn": {
+      "enabled": true,
+      "duration": "0.6s",
+      "delay": "0.1s"
+    },
+    "hover": {
+      "enabled": true,
+      "scale": "1.05",
+      "duration": "0.3s"
+    },
+    "gradient": {
+      "enabled": true,
+      "duration": "4s"
+    }
+  },
+  
+  "components": {
+    "hero": {
+      "showVinyl": true,
+      "showStats": true,
+      "backgroundPattern": "none"
+    },
+    "navigation": {
+      "style": "transparent",
+      "position": "fixed",
+      "showLogo": true
+    },
+    "buttons": {
+      "style": "gradient",
+      "borderRadius": "8px",
+      "padding": "12px 32px"
+    },
+    "cards": {
+      "style": "elevated",
+      "borderRadius": "8px",
+      "showBorder": false
+    }
+  },
+  
+  "content": {
+    "hero": {
+      "showItalianQuote": true,
+      "showGreekPhilosophy": true,
+      "showStats": true
+    },
+    "about": {
+      "showPersonalQuote": true,
+      "showCreationPhilosophy": true,
+      "showPlatformVision": true
+    },
+    "social": {
+      "platforms": [
+        {
+          "name": "小红书",
+          "handle": "@钢铁炼成的黄女士",
+          "followers": "4K",
+          "description": "生活分享与深度思考"
+        },
+        {
+          "name": "微信公众号", 
+          "handle": "钢铁炼成的黄女士",
+          "followers": "2K",
+          "description": "长文章与深度分析"
+        },
+        {
+          "name": "YouTube",
+          "handle": "@PoesiaHuang", 
+          "followers": "1.2K",
+          "description": "视频内容与创作过程"
+        },
+        {
+          "name": "Twitter",
+          "handle": "@PoesiaHuang",
+          "followers": "800", 
+          "description": "实时思考与互动"
+        }
+      ]
+    }
+  },
+  
+  "quickModifications": {
+    "colorSchemes": {
+      "warm": {
+        "primary": "#D2691E",
+        "secondary": "#CD853F",
+        "background": "#FFF8DC"
+      },
+      "cool": {
+        "primary": "#4682B4", 
+        "secondary": "#5F9EA0",
+        "background": "#F0F8FF"
+      },
+      "elegant": {
+        "primary": "#2F4F4F",
+        "secondary": "#708090", 
+        "background": "#F5F5F5"
+      },
+      "vibrant": {
+        "primary": "#FF6347",
+        "secondary": "#FF7F50",
+        "background": "#FFFAF0"
+      }
+    },
+    
+    "layoutStyles": {
+      "minimal": {
+        "sectionPadding": "60px 0",
+        "cardShadow": "none",
+        "borderRadius": "0px"
+      },
+      "modern": {
+        "sectionPadding": "100px 0", 
+        "cardShadow": "0 8px 32px rgba(0, 0, 0, 0.1)",
+        "borderRadius": "16px"
+      },
+      "classic": {
+        "sectionPadding": "80px 0",
+        "cardShadow": "0 2px 8px rgba(0, 0, 0, 0.1)", 
+        "borderRadius": "4px"
+      }
+    },
+    
+    "animationPresets": {
+      "subtle": {
+        "vinylSpeed": "30s",
+        "hoverScale": "1.02",
+        "fadeInDuration": "0.8s"
+      },
+      "dynamic": {
+        "vinylSpeed": "15s", 
+        "hoverScale": "1.08",
+        "fadeInDuration": "0.4s"
+      },
+      "static": {
+        "vinylSpeed": "none",
+        "hoverScale": "1.0", 
+        "fadeInDuration": "0s"
+      }
+    }
+  },
+  
+  "responsiveBreakpoints": {
+    "mobile": "768px",
+    "tablet": "1024px", 
+    "desktop": "1200px"
+  },
+  
+  "seo": {
+    "title": "HUANG / POESIA | 钢铁炼成的黄女士 - 诗意创造者",
+    "description": "钢铁炼成的黄女士的个人网站，分享深度思考、创作心得和生活感悟。从古希腊poiesis出发，探索创造的本质。",
+    "keywords": "黄女士, POESIA, 创作, 思考, 个人博客, 内容创作者",
+    "author": "钢铁炼成的黄女士"
+  }
+}
+

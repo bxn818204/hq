@@ -1,0 +1,497 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  
+  /* 新的色彩系统 - 钢铁炼成的黄女士 */
+  --steel-gray: #2C3E50;
+  --bronze-gold: #B8860B;
+  --ink-black: #1A1A1A;
+  --ivory-white: #F8F8FF;
+  --cinnabar-red: #DC143C;
+  --olive-green: #6B8E23;
+  --pearl-silver: #C0C0C0;
+  
+  --background: var(--ivory-white);
+  --foreground: var(--ink-black);
+  --card: var(--ivory-white);
+  --card-foreground: var(--steel-gray);
+  --popover: var(--ivory-white);
+  --popover-foreground: var(--steel-gray);
+  --primary: var(--bronze-gold);
+  --primary-foreground: var(--ivory-white);
+  --secondary: var(--pearl-silver);
+  --secondary-foreground: var(--steel-gray);
+  --muted: #F5F5F5;
+  --muted-foreground: var(--steel-gray);
+  --accent: var(--cinnabar-red);
+  --accent-foreground: var(--ivory-white);
+  --destructive: var(--cinnabar-red);
+  --border: var(--pearl-silver);
+  --input: var(--pearl-silver);
+  --ring: var(--bronze-gold);
+  --chart-1: var(--bronze-gold);
+  --chart-2: var(--cinnabar-red);
+  --chart-3: var(--olive-green);
+  --chart-4: var(--steel-gray);
+  --chart-5: var(--pearl-silver);
+  --sidebar: var(--ivory-white);
+  --sidebar-foreground: var(--steel-gray);
+  --sidebar-primary: var(--bronze-gold);
+  --sidebar-primary-foreground: var(--ivory-white);
+  --sidebar-accent: var(--pearl-silver);
+  --sidebar-accent-foreground: var(--steel-gray);
+  --sidebar-border: var(--pearl-silver);
+  --sidebar-ring: var(--bronze-gold);
+}
+
+.dark {
+  --background: var(--ink-black);
+  --foreground: var(--ivory-white);
+  --card: var(--steel-gray);
+  --card-foreground: var(--ivory-white);
+  --popover: var(--steel-gray);
+  --popover-foreground: var(--ivory-white);
+  --primary: var(--bronze-gold);
+  --primary-foreground: var(--ink-black);
+  --secondary: #3A4A5C;
+  --secondary-foreground: var(--ivory-white);
+  --muted: #2A3441;
+  --muted-foreground: var(--pearl-silver);
+  --accent: var(--cinnabar-red);
+  --accent-foreground: var(--ivory-white);
+  --destructive: var(--cinnabar-red);
+  --border: #3A4A5C;
+  --input: #3A4A5C;
+  --ring: var(--bronze-gold);
+  --chart-1: var(--bronze-gold);
+  --chart-2: var(--cinnabar-red);
+  --chart-3: var(--olive-green);
+  --chart-4: var(--pearl-silver);
+  --chart-5: #3A4A5C;
+  --sidebar: var(--steel-gray);
+  --sidebar-foreground: var(--ivory-white);
+  --sidebar-primary: var(--bronze-gold);
+  --sidebar-primary-foreground: var(--ink-black);
+  --sidebar-accent: #3A4A5C;
+  --sidebar-accent-foreground: var(--ivory-white);
+  --sidebar-border: #3A4A5C;
+  --sidebar-ring: var(--bronze-gold);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'STZhongsong', '华文中宋', serif;
+    background: linear-gradient(135deg, var(--ivory-white) 0%, #F5F5F5 100%);
+  }
+}
+
+/* 字体系统 */
+.font-renaissance {
+  font-family: 'Playfair Display', 'STZhongsong', '华文中宋', serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.font-greek {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.font-chinese {
+  font-family: 'STZhongsong', '华文中宋', serif;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.font-decorative {
+  font-family: 'STZhongsong', '华文中宋', serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* 钢铁质感动画 */
+@keyframes steel-forge {
+  0% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 20px rgba(184, 134, 11, 0.3);
+  }
+  50% {
+    background-position: 100% 50%;
+    box-shadow: 0 0 40px rgba(220, 20, 60, 0.4);
+  }
+  100% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 20px rgba(184, 134, 11, 0.3);
+  }
+}
+
+.steel-texture {
+  background: linear-gradient(
+    135deg,
+    var(--steel-gray) 0%,
+    var(--bronze-gold) 25%,
+    var(--steel-gray) 50%,
+    var(--bronze-gold) 75%,
+    var(--steel-gray) 100%
+  );
+  background-size: 400% 400%;
+  animation: steel-forge 4s ease-in-out infinite;
+}
+
+/* 古希腊几何图案 */
+.greek-pattern {
+  background-image: 
+    linear-gradient(45deg, transparent 40%, rgba(107, 142, 35, 0.1) 50%, transparent 60%),
+    linear-gradient(-45deg, transparent 40%, rgba(107, 142, 35, 0.1) 50%, transparent 60%);
+  background-size: 30px 30px;
+}
+
+/* 文艺复兴装饰 */
+.renaissance-border {
+  border: 2px solid var(--bronze-gold);
+  border-image: linear-gradient(45deg, var(--bronze-gold), var(--pearl-silver), var(--bronze-gold)) 1;
+  position: relative;
+}
+
+.renaissance-border::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, var(--bronze-gold), transparent, var(--bronze-gold));
+  z-index: -1;
+  border-radius: inherit;
+}
+
+/* 中式留白美学 */
+.chinese-spacing {
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+}
+
+.chinese-spacing h2 {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.chinese-spacing h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--bronze-gold), transparent);
+}
+
+/* 黑胶唱片重新设计 */
+@keyframes vinyl-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.vinyl-record {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--ink-black) 20%,
+    var(--steel-gray) 25%,
+    var(--ink-black) 30%,
+    var(--steel-gray) 35%,
+    var(--ink-black) 40%
+  );
+  position: relative;
+  animation: vinyl-spin 20s linear infinite;
+  box-shadow: 
+    0 0 30px rgba(44, 62, 80, 0.5),
+    inset 0 0 20px rgba(184, 134, 11, 0.2);
+}
+
+.vinyl-record::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--bronze-gold);
+  box-shadow: inset 0 0 10px rgba(26, 26, 26, 0.5);
+}
+
+.vinyl-record::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ink-black);
+}
+
+/* 主标题样式 */
+.main-title {
+  font-family: 'Playfair Display', 'Noto Serif SC', serif;
+  font-weight: 900;
+  font-size: 4rem;
+  background: linear-gradient(135deg, var(--bronze-gold), var(--cinnabar-red), var(--bronze-gold));
+  background-size: 200% 200%;
+  animation: steel-forge 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(44, 62, 80, 0.3);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  color: var(--steel-gray);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* 优雅的悬停效果 */
+.elegant-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.elegant-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(184, 134, 11, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.elegant-hover:hover::before {
+  left: 100%;
+}
+
+.elegant-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 15px 35px rgba(44, 62, 80, 0.2),
+    0 5px 15px rgba(184, 134, 11, 0.1);
+}
+
+/* 卡片样式重新设计 */
+.fusion-card {
+  background: linear-gradient(135deg, var(--ivory-white) 0%, #F8F8F8 100%);
+  border: 1px solid var(--pearl-silver);
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.fusion-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--bronze-gold), var(--cinnabar-red), var(--olive-green));
+}
+
+/* 导航栏重新设计 */
+.fusion-nav {
+  background: rgba(248, 248, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--pearl-silver);
+  box-shadow: 0 2px 20px rgba(44, 62, 80, 0.1);
+}
+
+.fusion-nav button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--steel-gray);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.fusion-nav button::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--bronze-gold);
+  transition: width 0.3s ease;
+}
+
+.fusion-nav button:hover::after {
+  width: 100%;
+}
+
+.fusion-nav button:hover {
+  color: var(--bronze-gold);
+}
+
+/* 档案库风格元素 */
+.archive-grid {
+  background-image: 
+    linear-gradient(rgba(184, 134, 11, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184, 134, 11, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.archive-card {
+  background: linear-gradient(135deg, var(--ivory-white) 0%, #F8F8F8 100%);
+  border: 1px solid var(--pearl-silver);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.archive-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--bronze-gold), var(--cinnabar-red));
+}
+
+.archive-number {
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: var(--bronze-gold);
+  opacity: 0.7;
+}
+
+.legacy-title {
+  font-family: 'Playfair Display', 'Noto Serif SC', serif;
+  font-weight: 900;
+  font-size: 6rem;
+  background: linear-gradient(135deg, var(--bronze-gold), var(--cinnabar-red), var(--bronze-gold));
+  background-size: 200% 200%;
+  animation: steel-forge 4s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(44, 62, 80, 0.3);
+  letter-spacing: 0.1em;
+  line-height: 0.9;
+}
+
+/* 酷与古典融合的按钮 */
+.fusion-button {
+  background: linear-gradient(135deg, var(--steel-gray) 0%, var(--bronze-gold) 100%);
+  border: 1px solid var(--bronze-gold);
+  color: var(--ivory-white);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.fusion-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(248, 248, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.fusion-button:hover::before {
+  left: 100%;
+}
+
+.fusion-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 25px rgba(44, 62, 80, 0.3),
+    0 5px 15px rgba(184, 134, 11, 0.2);
+}
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+  
+  .vinyl-record {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .chinese-spacing {
+    padding: 2rem 1rem;
+  }
+}
+
